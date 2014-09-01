@@ -1,10 +1,11 @@
 Simple bot, that collects cites information such as population, geographic coordinates
 and put to a database.
-Implemented using casperjs and phantomjs.
+Implemented using nodejs and it's modules
 
-Install casperjs via npm (npm install -g casperjs). It will install
-phantomjs as well.
+Install required modules with:
+
+```npm install```
 
 Than run:
 
-```casperjs cities_bot.js```
+```node app.js```
