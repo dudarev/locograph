@@ -30,9 +30,7 @@ var download = function(url, callback) {
   });
 }
 
-// Get links from the cities ulr, using JQuery-like syntax
-// In 'usual' JQuery the request would be
-// ``````
+// Get links from the cities url, using JQuery-like syntax
 
 var get_links = function() {
   download(cities_url, function(data) {
