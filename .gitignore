@@ -1,1 +1,2 @@
 bots/openstreetmap/*.osm.bz2
+bots/wikipedia/node_modules/*
