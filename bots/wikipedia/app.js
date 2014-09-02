@@ -6,7 +6,8 @@
 
 var http = require("http")
     , cheerio = require("cheerio")
-    , MongoClient = require('mongodb').MongoClient;
+    , MongoClient = require('mongodb').MongoClient
+    , argv = require('minimist')(process.argv.slice(2));
 
 var cities_url = "http://en.wikipedia.org/wiki/List_of_towns_and_cities_with_100,000_or_more_inhabitants/cityname:_A"
     , base_url = "http://en.wikipedia.org"
@@ -30,16 +31,27 @@ var download = function(url, callback) {
   });
 }
 
+var parseLinks = function(data) {
+  console.dir(data);
+  return data;
+}
+
+var store = function(data) {
+  console.dir(data);
+  return data;
+}
+
 // Get links from the cities url, using JQuery-like syntax
 
 var get_links = function() {
+  console.dir("Getting data...");
   download(cities_url, function(data) {
     if(data) {
       var $ = cheerio.load(data);
       var result = $('table.wikitable tr td:not(:has(>span)) a').map(function(i, el) {
         return base_url + $(el).attr('href');
       });
-      return result;
+      parseLinks(result);
     } else {
       throw "Could not dowload data from given url"
     }
@@ -48,6 +60,10 @@ var get_links = function() {
 
 
 // main part
-// TODO 2 move into loop
 
-get_links();
+// Getting links using provided time interval
+if(argv.hasOwnProperty("t")) {
+  setInterval(get_links, argv.t * 1000);
+} else {
+  console.dir("Please set time interval in seconds with -t option")
+}
