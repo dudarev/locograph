@@ -1,1 +1,3 @@
 bots/openstreetmap/*.osm.bz2
+*.pyc
+*/lib/*egg-info*
