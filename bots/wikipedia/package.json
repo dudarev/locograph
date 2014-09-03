@@ -1,0 +1,11 @@
+{
+  "name": "wikipedia_crawler",
+  "description": "Crawls cities from Wikipedia and saves to mongo DB",
+  "author": "Dmitro Ugnichenko <mitya@mityaz.co.ua>",
+  "dependencies": {
+    "mongodb": "1.4.x",
+    "cheerio": "0.17.x",
+    "minimist": "1.1.x"
+  }
+}
+
