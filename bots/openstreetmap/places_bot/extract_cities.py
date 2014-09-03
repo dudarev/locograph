@@ -31,10 +31,7 @@ for row in reader:
             --bounding-box top={} left={} bottom={} right={} \
             --write-xml file=- \
             | bzip2 > {}.osm.bz2'''.format(
-            city['lat_max'],
-            city['lon_min'],
-            city['lat_min'],
-            city['lon_max'],
+            city['lat_max'], city['lon_min'], city['lat_min'], city['lon_max'],
             city['name'])
         print command
         subprocess.check_call(
