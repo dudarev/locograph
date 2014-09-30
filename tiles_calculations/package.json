@@ -1,0 +1,11 @@
+{
+  "name": "tiles_calculations",
+  "version": "1.0.0",
+  "author": "Dmitriy Ugnichenko",
+  "description": "Calculation of QuadTiles and SlippyTiles size for given Lontitude and Latitude",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "BSD"
+}
