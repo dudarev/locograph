@@ -32,7 +32,7 @@ var TileSize = (function() {
     console.log(this.lat_degree + ' degrees');
     for(var i in this.zoomLevels) {
       var zoomLevel = this.zoomLevels[i];
-      var res = this.sizeKilometers(this.lat_degree, this.lontit_degree, zoomLevel);
+      var res = this.sizeKilometers(zoomLevel);
       console.log('zoom_level: ' + zoomLevel + '\tw: ' + res.width + ', h: ' + res.height);
     }
   }
